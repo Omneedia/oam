@@ -2,7 +2,6 @@ module.exports = function(args, root) {
     require('dotenv').config({
         path: global.config.datastore + '/.omneedia-ci/api/.env',
     });
-    return console.log(process.env);
     const inquirer = require('inquirer');
     const ora = require('ora');
     const yaml = require('yaml');
