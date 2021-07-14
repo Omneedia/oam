@@ -160,12 +160,19 @@ module.exports = function(args, root) {
                     compose.networks['public'] = {
                         external: true,
                     };
+                    compose.services[el].networks = ['app', 'public'];
                 }
             }
             if (service.publish) {
-                compose.services[el].labels.vhost = service.publish.uri;
-                compose.services[el].labels['vhost.port'] = service.publish.port;
-                compose.services[el].labels['vhost.ssl'] = 1;
+                compose.services[el].labels = {
+                    vhost: service.publish.uri,
+                    'vhost.port': service.publish.port,
+                    'vhost.ssl': 1,
+                };
+                compose.services[el].networks.push('public');
+                compose.networks['public'] = {
+                    external: true,
+                };
             }
             if (service.deploy) {
                 var replica = 1;
