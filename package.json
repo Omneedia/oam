@@ -1,65 +1,65 @@
 {
-  "_from": "oam@1.0.20",
-  "_id": "oam@1.0.20",
-  "_inBundle": false,
-  "_integrity": "sha512-bFZPQGiYvX1nGdD2eF2sYz/XWeDhkzpSaWNulpeCMAXsjEDn+hvZ/sggr2uHhHYxdyqOfzqYpqz6kT+RAWRTKg==",
-  "_location": "/oam",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "oam@1.0.20",
+    "_from": "oam@1.0.20",
+    "_id": "oam@1.0.20",
+    "_inBundle": false,
+    "_integrity": "sha512-bFZPQGiYvX1nGdD2eF2sYz/XWeDhkzpSaWNulpeCMAXsjEDn+hvZ/sggr2uHhHYxdyqOfzqYpqz6kT+RAWRTKg==",
+    "_location": "/oam",
+    "_phantomChildren": {},
+    "_requested": {
+        "type": "version",
+        "registry": true,
+        "raw": "oam@1.0.20",
+        "name": "oam",
+        "escapedName": "oam",
+        "rawSpec": "1.0.20",
+        "saveSpec": null,
+        "fetchSpec": "1.0.20"
+    },
+    "_requiredBy": [
+        "#USER"
+    ],
+    "_resolved": "https://registry.npmjs.org/oam/-/oam-1.0.20.tgz",
+    "_shasum": "0a1389c5f60cc3ce8558a311945188409ccb5e02",
+    "_spec": "oam@1.0.20",
+    "_where": "/root",
+    "author": {
+        "name": "Stéphane Zucatti"
+    },
+    "bin": {
+        "oam": "oam.js"
+    },
+    "bundleDependencies": false,
+    "dependencies": {
+        "adm-zip": "^0.5.5",
+        "archiver": "^5.3.0",
+        "axios": "^0.21.1",
+        "boxen": "^4.1.0",
+        "chalk": "^3.0.0",
+        "dotenv": "^10.0.0",
+        "figlet": "^1.2.4",
+        "find-up": "^4.1.0",
+        "fs-extra": "^10.0.0",
+        "generate-password": "^1.6.0",
+        "human-readable-ids": "^1.0.4",
+        "inquirer": "^7.3.3",
+        "jwt-decode": "^3.0.0-beta.2",
+        "log-symbols": "^3.0.0",
+        "object-path": "^0.11.4",
+        "openpgp": "^5.0.0-3",
+        "ora": "^5.4.1",
+        "prettyjson": "^1.2.1",
+        "shelljs": "^0.8.4",
+        "shortid": "^2.2.15",
+        "username-generator": "^1.1.0",
+        "yaml": "^1.10.2"
+    },
+    "deprecated": false,
+    "description": "Omneedia Manager CLI",
+    "license": "ISC",
+    "main": "index.js",
     "name": "oam",
-    "escapedName": "oam",
-    "rawSpec": "1.0.20",
-    "saveSpec": null,
-    "fetchSpec": "1.0.20"
-  },
-  "_requiredBy": [
-    "#USER"
-  ],
-  "_resolved": "https://registry.npmjs.org/oam/-/oam-1.0.20.tgz",
-  "_shasum": "0a1389c5f60cc3ce8558a311945188409ccb5e02",
-  "_spec": "oam@1.0.20",
-  "_where": "/root",
-  "author": {
-    "name": "Stéphane Zucatti"
-  },
-  "bin": {
-    "oam": "oam.js"
-  },
-  "bundleDependencies": false,
-  "dependencies": {
-    "adm-zip": "^0.5.5",
-    "archiver": "^5.3.0",
-    "axios": "^0.21.1",
-    "boxen": "^4.1.0",
-    "chalk": "^3.0.0",
-    "dotenv": "^10.0.0",
-    "figlet": "^1.2.4",
-    "find-up": "^4.1.0",
-    "fs-extra": "^10.0.0",
-    "generate-password": "^1.6.0",
-    "human-readable-ids": "^1.0.4",
-    "inquirer": "^7.3.3",
-    "jwt-decode": "^3.0.0-beta.2",
-    "log-symbols": "^3.0.0",
-    "object-path": "^0.11.4",
-    "openpgp": "^5.0.0-3",
-    "ora": "^5.4.1",
-    "prettyjson": "^1.2.1",
-    "shelljs": "^0.8.4",
-    "shortid": "^2.2.15",
-    "username-generator": "^1.1.0",
-    "yaml": "^1.10.2"
-  },
-  "deprecated": false,
-  "description": "Omneedia Manager CLI",
-  "license": "ISC",
-  "main": "index.js",
-  "name": "oam",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "version": "1.0.21"
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "version": "1.0.22"
 }
