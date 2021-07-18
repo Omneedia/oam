@@ -36,9 +36,12 @@ module.exports = function(args, root) {
                 var pos = p[i].indexOf('}');
                 var myvar = p[i].substr(0, pos);
                 var fup = p[i].substr(pos + 1, p[i].length);
-                var myvalue = process.env[myvar];
-                if (!myvalue)
-                    return error('environment variable ' + myvar + ' not found.');
+                var myvalue = process.env[myvar.split(':-')[0]];
+                if (!myvalue) {
+                    if (myvar.split(':-')[1]) myvalue = myvar.split(':-')[1];
+                    else return error('environment variable ' + myvar + ' not found.');
+                }
+
                 result.push(myvalue + fup);
             }
         }

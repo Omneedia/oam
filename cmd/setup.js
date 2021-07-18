@@ -11,6 +11,11 @@ module.exports = function(args, root) {
     const genpass = require('generate-password');
     const genuser = require('username-generator');
 
+    const DIR_STACK = 'omneedia-core-web-prod';
+    const DIR_NGINX = `${global.config.datastore}/${DIR_STACK}_etc`;
+    const DIR_BOT = `${global.config.datastore}/${DIR_STACK}_robocert`;
+    const DIR_CERTS = `${global.config.datastore}/${DIR_STACK}_certs`;
+
     console.log(global.logo);
 
     var dns = {
@@ -75,15 +80,14 @@ module.exports = function(args, root) {
                             function(e, cfg) {
                                 cfg = cfg.replace(/\${DOMAIN}/g, response.domain);
                                 fs.writeFile(
-                                    `${global.config.nginx}/sites-enabled/_.${response.domain}.conf`,
+                                    `${DIR_NGINX}/sites-enabled/_.${response.domain}.conf`,
                                     cfg,
                                     function() {
                                         fs.unlink(
-                                            `${global.config.nginx}/sites-enabled/_.conf`,
+                                            `${DIR_NGINX}/sites-enabled/_.conf`,
                                             function() {
                                                 fs.writeFile(
-                                                    global.config.datastore +
-                                                    '/.omneedia-ci/certs/config.yml',
+                                                    `${DIR_BOT}/config.yml`,
                                                     txt,
                                                     function() {
                                                         console.log(chalk.bold('\nok.'));
@@ -95,7 +99,8 @@ module.exports = function(args, root) {
                                                                 numbers: true,
                                                             }),
                                                             OMNEEDIA_ROOT_CONFIG: global.config.datastore + '/.omneedia-ci',
-                                                            OMNEEDIA_ROOT_CERTS: global.config.certs,
+                                                            OMNEEDIA_ROOT_CERTS: DIR_CERTS,
+                                                            OMNEEDIA_ROOT_BOT: DIR_BOT,
                                                             OMNEEDIA_REGISTRY_URI: 'registry.' + response.domain,
                                                         };
                                                         var env = [];
